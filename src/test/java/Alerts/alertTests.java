@@ -9,10 +9,10 @@ public class alertTests extends BaseTests {
 
     @Test
     public void testAcceptAlert(){
-        var alertPage = homePage.clickJavaScriptAlerts();
-        alertPage.triggerAlert();
-        alertPage.alert_clickToAccept();
-        assertEquals(alertPage.getResults(), "You successfully clicked an alert", "Results text incorrect");
+        var alertsPage = homePage.clickJavaScriptAlerts();
+        alertsPage.triggerAlert();
+        alertsPage.alert_clickToAccept();
+        assertEquals(alertsPage.getResults(), "You successfully clicked an alert", "Results text incorrect");
     }
 
     @Test
@@ -29,10 +29,9 @@ public class alertTests extends BaseTests {
         var alertsPage = homePage.clickJavaScriptAlerts();
         alertsPage.triggerPrompt();
 
-        String text = "TAU rocks";
+        String text = "TAU rocks!";
         alertsPage.alert_setInput(text);
         alertsPage.alert_clickToAccept();
-        assertEquals(alertsPage.getResults(),"You entered: " +text, "Results text incorrect");
+        assertEquals(alertsPage.getResults(), "You entered: " + text, "Results text incorrect");
     }
-
 }

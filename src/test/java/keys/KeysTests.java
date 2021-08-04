@@ -18,10 +18,7 @@ public class KeysTests extends BaseTests {
     public void testPi(){
         var keyPage = homePage.clickKeyPresses();
         keyPage.enterPi();
-        /*
-            NOTE: we didn't finish this test in the video.
-            We debugged to watch it enter the pi key
-         */
+
     }
 
 }
